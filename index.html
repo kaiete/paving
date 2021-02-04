@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>paving</title>
+  </head>
+  <body>
+    <!--js-->
+    <script>
+      function pavetheway() {
+        var search = prompt("Query:");
+        var encodedQuery = encodeURIComponent(search);
+        window.location.href = "https://duckduckgo.com/?q=" + encodedQuery;
+      }
+    </script>
+    <!--html-->
+    <div class="center">
+      <h1 class="center">paving</h1>
+      <button class="searchbutton" id="searchbutton" onclick="pavetheway()">
+        Search...
+      </button>
+    </div>
+    <!--css-->
+    <style>
+      body {
+        background-image: url("https://edu.aragon-press.com/aragon-press-edu-math-background.jpeg");
+        font-family: Courier;
+        width: 95%;
+        height: 90%;
+      }
+      .center {
+        align-items: center;
+        text-align: center;
+      }
+      .searchbutton:hover {
+        color: green;
+      }
+    </style>
+  </body>
+</html>
