@@ -8,7 +8,12 @@
     <script>
       function pavetheway() {
         var search = prompt("Query:");
-        search == "Project StoryTime" ? window.location.href = "http://storytime.k.vu/" : var encodedQuery = encodeURIComponent(search); window.location.href = "https://duckduckgo.com/?q=" + encodedQuery;
+        if (search == "Project StoryTime") {
+          window.location.href = "http://storytime.k.vu"
+        } else {
+          var encodedsearch = encodeURIComponent(search)
+          window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
+        }
       }
     </script>
     <!--html-->
