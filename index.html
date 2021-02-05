@@ -4,8 +4,19 @@
     <title>paving</title>
   </head>
   <body>
-    <!--js-->
-    <script>
+    <!--html-->
+    <div class="center">
+      <h1 class="center">paving</h1>
+      <button class="searchbutton" id="searchbutton" onclick="pavetheway()">
+        Search...
+      </button>
+    </div>
+    <div class="bottomleft">
+      <button onclick="pageeditable()" id="edit">Edit this page 📝</button>
+      <button onclick="pageviewable()" id="view" hidden>View this page 👀</button>
+    </div>
+    <!--javascript-->
+        <script>
       function pavetheway() {
         var search = prompt("Query:");
         if (search == "Project StoryTime") {
@@ -27,17 +38,6 @@
       }
       pageviewable()
     </script>
-    <!--html-->
-    <div class="center">
-      <h1 class="center">paving</h1>
-      <button class="searchbutton" id="searchbutton" onclick="pavetheway()">
-        Search...
-      </button>
-    </div>
-    <div class="bottomleft">
-      <button onclick="pageeditable()" id="edit">Edit this page 📝</button>
-      <button onclick="pageviewable()" id="view" hidden>View this page 👀</button>
-    </div>
     <!--css-->
     <style>
       body {
