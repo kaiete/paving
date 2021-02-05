@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" id="html" contenteditable="false">
+<html lang="en" id="html">
   <head>
     <title>paving</title>
   </head>
@@ -15,12 +15,15 @@
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
         }
       }
-      function changeEditable() {
-        if (document.getElementById("html").contenteditable == true) {
-          document.getElementById("html").contenteditable = false
-        } else {
+      function changeEditable(to) {
+        if (to) {
           document.getElementById("html").contenteditable = true
-        }
+          document.getElementById("edit").hidden = true
+          document.getElementById("view").hidden = false
+        }else{
+          document.getElementById("html").contenteditable = false
+          document.getElementById("edit").hidden = false
+          document.getElementById("view").hidden = true
       }
     </script>
     <!--html-->
@@ -31,7 +34,8 @@
       </button>
     </div>
     <div class="bottomleft">
-      <button onclick="changeEditable()">Edit this page 📝</button>
+      <button onclick="changeEditable(true)" id="edit">Edit this page 📝</button>
+      <button onclick="changeEditable(false)" id="view" hidden>View this page 👀</button>
     </div>
     <!--css-->
     <style>
