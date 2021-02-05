@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="html">
   <head>
     <title>paving</title>
   </head>
@@ -15,6 +15,13 @@
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
         }
       }
+      function changeEditable() {
+        if (document.getElementById("html").contenteditable == true) {
+          document.getElementById("html").contenteditable = false
+        } else {
+          document.getElementById("html").contenteditable = true
+        }
+      }
     </script>
     <!--html-->
     <div class="center">
@@ -22,6 +29,9 @@
       <button class="searchbutton" id="searchbutton" onclick="pavetheway()">
         Search...
       </button>
+    </div>
+    <div class="bottomleft">
+      <button onclick="changeEditable()">Edit this page ✏️</button>
     </div>
     <!--css-->
     <style>
@@ -37,6 +47,12 @@
       }
       .searchbutton:hover {
         color: blue;
+      }
+      .bottomleft {
+        position: absolute;
+        bottom: 5px;
+        align-items: left;
+        text-align: left;
       }
     </style>
   </body>
