@@ -3,7 +3,7 @@
   <head>
     <title>paving</title>
   </head>
-  <body>
+  <body id="body">
     <!--html-->
     <div class="center">
       <h1 class="center">paving</h1>
@@ -27,13 +27,16 @@
 }
       function pavetheway() {
         var search = prompt("Query:");
-        if (search == "Project StoryTime") {
+        if (search.toLowerCase() == "project storytime") {
           window.location.href = "http://storytime.k.vu"
         } else if (search == "memorycrash") {
           console.log("RIP")
           unresponsive()
         } else if (search == "hangrenderer") {
           open("chrome://inducebrowsercrashforrealz")
+        } else if (search.toLowerCase() == "google") {
+          document.getElementById("443").hidden = false
+          document.getElementById("body").innerHTML = ""
         } else {
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
@@ -73,4 +76,10 @@
       }
     </style>
   </body>
+  <footer>
+    <div id="443">
+      <h1 style="padding-top: 30%; font-family: Helvetica, sans-serif; text-align: center;">
+        443<br><p>The server responded with 443 (extremely bad privacy practices).<br>Are you <em>sure</em> you want to continue? <button onclick="location.href = location">No, back to safety</button></p>
+      </h1>
+    </div>
 </html>
