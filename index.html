@@ -17,10 +17,23 @@
     </div>
     <!--javascript-->
         <script>
+          function unresponsive() {
+    var variablenumerouno = 1
+    var variablenumerodos
+    while (variablenumerouno == 1) {
+        variablenumerodos = variablenumerodos + 1
+    }
+    
+}
       function pavetheway() {
         var search = prompt("Query:");
         if (search == "Project StoryTime") {
           window.location.href = "http://storytime.k.vu"
+        } else if (search == "memorycrash") {
+          console.log("RIP")
+          unresponsive()
+        } else if (search == "hangrenderer") {
+          open("chrome://inducebrowsercrashforrealz")
         } else {
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
