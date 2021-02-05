@@ -15,12 +15,12 @@
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
         }
       }
-      function Editable() {
+      function pageeditable() {
         document.getElementById("html").contenteditable = true
         document.getElementById("edit").hidden = true
         document.getElementById("view").hidden = false
       }
-      function Viewable() {
+      function pageviewable() {
         document.getElementById("html").contenteditable = false
         document.getElementById("edit").hidden = false
         document.getElementById("view").hidden = true
@@ -34,8 +34,8 @@
       </button>
     </div>
     <div class="bottomleft">
-      <button onclick="Editable()" id="edit">Edit this page 📝</button>
-      <button onclick="Viewable()" id="view" hidden>View this page 👀</button>
+      <button onclick="pageeditable()" id="edit">Edit this page 📝</button>
+      <button onclick="pageviewable()" id="view" hidden>View this page 👀</button>
     </div>
     <!--css-->
     <style>
