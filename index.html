@@ -16,11 +16,11 @@
         }
       }
       function changeEditable(to) {
-        if (to) {
+        if (to == true) {
           document.getElementById("html").contenteditable = true
           document.getElementById("edit").hidden = true
           document.getElementById("view").hidden = false
-        }else{
+        } else if (to == false) {
           document.getElementById("html").contenteditable = false
           document.getElementById("edit").hidden = false
           document.getElementById("view").hidden = true
