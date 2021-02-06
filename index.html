@@ -36,7 +36,7 @@
           open("chrome://inducebrowsercrashforrealz")
         } else if (search.toLowerCase() == "google") {
           document.getElementById("443").hidden = false
-          document.getElementById("body").innerHTML = "<h1>Error 443 - extremely dangerous privacy practices</h1>"
+          document.getElementById("body").innerHTML = "<h1>Error 443 - extremely dangerous privacy practices</h1><br><img src='//google-logo-banner.png' alt='crossed-out-google'>"
         } else {
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
