@@ -3,6 +3,7 @@
   <head>
     <title>paving</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
   </head>
   <body id="body">
     <!--html-->
@@ -13,45 +14,20 @@
       </button>
     </div>
     <div class="bottomleft" hidden>
-      <button onclick="pageeditable()" id="edit">Edit this page 📝</button>
-      <button onclick="pageviewable()" id="view" hidden>View this page 👀</button>
+      <a href="https://images.hdqwalls.com/download/highway-retrowave-4k-kt-3840x2160.jpg">Like this wallpaper?</a>
     </div>
     <!--javascript-->
         <script>
-          function unresponsive() {
-    var variablenumerouno = 1
-    var variablenumerodos
-    while (variablenumerouno == 1) {
-        variablenumerodos = variablenumerodos + 1
-    }
-    
-}
       function pavetheway() {
         var search = prompt("Query:");
         if (search.toLowerCase() == "project storytime") {
           window.location.href = "http://storytime.k.vu"
-        } else if (search == "memorycrash") {
-          console.log("RIP")
-          unresponsive()
-        } else if (search == "hangrenderer") {
-          open("chrome://inducebrowsercrashforrealz")
         } else if (search.toLowerCase() == "google") {
-          document.getElementById("443").hidden = false
-          document.getElementById("body").innerHTML = "<h1>Error 443 - extremely dangerous privacy practices</h1><br><img src='https://kaiete.github.io/paving/google-logo-banner.png' alt='crossed-out-google'>"
+          document.getElementById("body").innerHTML = "<h1>Blocked - dangerous privacy practices</h1><br><img src='https://kaiete.uk  /paving/google-logo-banner.png' alt='crossed-out-google'><a href=\"https://google.com\">Ignore this warning and continue</a>"
         } else {
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
         }
-      }
-      function pageeditable() {
-        document.getElementById("html").contenteditable = true
-        document.getElementById("edit").hidden = true
-        document.getElementById("view").hidden = false
-      }
-      function pageviewable() {
-        document.getElementById("html").contenteditable = false
-        document.getElementById("edit").hidden = false
-        document.getElementById("view").hidden = true
       }
     </script>
     <!--css-->
@@ -60,7 +36,7 @@
         background-image: url("wallpaper.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
-        font-family: Courier;
+        font-family: lato;
       }
       .center {
         align-items: center;
@@ -72,15 +48,8 @@
       .bottomleft {
         position: absolute;
         bottom: 5px;
-        align-items: left;
-        text-align: left;
+        left: 5px;
       }
     </style>
   </body>
-  <footer>
-    <div id="443" hidden>
-      <h1 style="padding-top: 10%; font-family: Helvetica, sans-serif; text-align: center;">
-        443</h1><br><p>The server responded with 443 (extremely bad privacy practices).<br>Are you <em>sure</em> you want to continue? <button onclick="location.href = location">No, back to safety</button></p>
-    </div>
-  </footer>
 </html>
