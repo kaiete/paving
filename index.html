@@ -9,9 +9,13 @@
     <!--html-->
     <div class="center">
       <h1 class="center" style="color: white;">paving</h1>
-      <button class="searchbutton" id="searchbutton" onclick="pavetheway()">
+      <button class="searchbutton" id="searchbutton" onclick="search()">
         Search...
       </button>
+      <div id="querybox" hidden>
+        <input type="text" id="query" value="" placeholder="Search for anything..." style="display: inline;">
+        <button onclick="pavetheway()" id="go">Go!</button>
+      </div>
     </div>
     <div class="bottomleft" hidden>
       <a href="https://images.hdqwalls.com/download/highway-retrowave-4k-kt-3840x2160.jpg">Like this wallpaper?</a>
@@ -19,7 +23,7 @@
     <!--javascript-->
         <script>
       function pavetheway() {
-        var search = prompt("Query:");
+        var search = document.getElementById("query").value
         if (search.toLowerCase() == "project storytime") {
           window.location.href = "http://storytime.k.vu"
         } else if (search.toLowerCase() == "google") {
@@ -28,6 +32,9 @@
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
         }
+      }
+      function search() {
+        document.getElementById("querybox").hidden = false
       }
     </script>
     <!--css-->
@@ -49,6 +56,22 @@
         position: absolute;
         bottom: 5px;
         left: 5px;
+      }
+      #query {
+        width: 30%;
+        height: 2em;
+        border-radius: 1em;
+        border: rgb(160, 158, 158) solid 2px;
+        margin: .5em;
+      }
+      button {
+        border-radius: .5em;
+        border: none;
+      }
+      #go {
+        height: 2em;
+        padding:  0px .5em;
+        border-radius: 2em;
       }
     </style>
   </body>
