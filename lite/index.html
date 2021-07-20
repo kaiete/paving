@@ -3,15 +3,8 @@
   <head>
     <title>paving</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
-    <script>
-      if (localStorage.getItem('lite') == "true") {
-        location.href = "https://kaiete.uk/paving/lite/"
-      }
-    </script>
   </head>
   <body id="body">
-    <a href="lite/" onclick="localStorage.setItem('lite','true')" style="position: absolute; bottom: 5px; right: 5px; text-align: right; background: white; border-radius: .5em; padding: 0px 3px;">Slow internet?</a>
     <!--html-->
     <div class="center">
       <h1 class="center" style="color: white;">paving</h1>
@@ -22,9 +15,9 @@
         <input type="text" id="query" value="" placeholder="Search for anything..." style="display: inline;">
         <button onclick="pavetheway()" id="go">Go!</button>
       </div>
-    </div>
-    <div class="bottomleft">
-      <a href="https://images.hdqwalls.com/download/highway-retrowave-4k-kt-3840x2160.jpg" style="background: white; border-radius: .5em; padding: 0px 3px;">Like this wallpaper?</a>
+      <div style="position: absolute; bottom: 5px; right: 5px; text-align: right; background: white; border-radius: .5em; padding: 0px 3px;">
+        <a href="/" onclick="localStorage.setItem('lite','false')">Normal version</a>
+      </div>
     </div>
     <!--javascript-->
         <script>
@@ -46,10 +39,10 @@
     <!--css-->
     <style>
       body {
-        background-image: url("wallpaper.jpg");
+        background-image: linear-gradient(to bottom right, rgb(31, 42, 141), rgb(126, 14, 107));
         background-repeat: no-repeat;
         background-size: 100%;
-        font-family: lato;
+        font-family: -apple-system, BlinkMacSystemFont, ubuntu, "Segoe UI", sans-serif;
       }
       .center {
         align-items: center;
@@ -78,6 +71,9 @@
         height: 2em;
         padding:  0px .5em;
         border-radius: 2em;
+      }
+      html {
+          height: 100%;
       }
     </style>
   </body>
