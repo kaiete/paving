@@ -34,6 +34,8 @@
           window.location.href = "http://storytime.k.vu"
         } else if (search.toLowerCase() == "google") {
           document.getElementById("body").innerHTML = "<h1>Blocked - dangerous privacy practices</h1><br><img src='https://kaiete.uk  /paving/google-logo-banner.png' alt='crossed-out-google'><a href=\"https://google.com\">Ignore this warning and continue</a>"
+        } else if (search.includes("http://") || search.includes("https://") || search.includes("www.")) {
+          location.href = search
         } else {
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
