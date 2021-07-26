@@ -8,6 +8,14 @@
       if (localStorage.getItem('lite') == "true") {
         location.href = "https://kaiete.uk/paving/lite/"
       }
+      function search() {
+        document.getElementById("querybox").hidden = false
+        document.getElementById("query").focus()
+        document.getElementById("query").onkeypress = function(e) {
+          if (e.keyCode == 13) {
+            pavetheway()
+          }
+      }
     </script>
   </head>
   <body id="body">
@@ -40,14 +48,6 @@
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
         }
-      }
-      function search() {
-        document.getElementById("querybox").hidden = false
-        document.getElementById("query").focus()
-        document.getElementById("query").onkeypress = function(e) {
-          if (e.keyCode == 13) {
-            pavetheway()
-          }
       }
     </script>
     <!--css-->
