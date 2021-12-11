@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" id="html">
+  <head>
+    <title>paving</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
+    <script>
+      if (localStorage.getItem("ocean") == "false") {
+        location.href = "https://kaiete.uk/paving/"
+      }
+      function search() {
+        document.getElementById("querybox").hidden = false
+        document.getElementById("query").focus()
+        document.getElementById("query").onkeypress = function(e) {
+          if (e.keyCode == 13) {
+            pavetheway()
+          }
+      }
+      }
+      const ocean = function() {
+        localStorage.setItem("ocean","false")
+        location.reload()
+      }
+    </script>
+  </head>
+  <body id="body">
+    <!--html-->
+    <div class="center">
+      <h1 class="center" style="color: white;">paving</h1>
+      <p class="center" style="color:white"><i>Ocean mode</i></p>
+      <button class="searchbutton" id="searchbutton" onclick="search()">
+        Search...
+      </button>
+      <div id="querybox" hidden>
+        <input type="text" id="query" value="" placeholder="Search for anything..." style="display: inline;">
+        <button onclick="pavetheway()" id="go">Go!</button>
+      </div>
+    </div>
+    <div class="bottomleft">
+      <button id="ocean" onclick="ocean()">Normal version</button>
+    </div>
+    <!--javascript-->
+        <script>
+      function pavetheway() {
+        var search = document.getElementById("query").value
+        if (search.toLowerCase() == "project storytime") {
+          window.location.href = "http://storytime.k.vu"
+        } else if (search.toLowerCase() == "google") {
+          document.getElementById("body").innerHTML = "<h1>Blocked - dangerous privacy practices</h1><br><img src='https://kaiete.uk /paving/google-logo-banner.png' alt='crossed-out-google'><a href=\"https://google.com\">Ignore this warning and continue</a>"
+        } else if (search.search("http://") != -1 || search.search("https://") != -1 || search.search("www.") != -1) {
+          location.href = search
+        } else {
+          var encodedsearch = encodeURIComponent(search)
+          if !(localStorage.getItem("ocean") == "true") {
+          window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
+          } else {
+            window.location.href = "https://oceanhero.today/web?q=" = encodedsearch
+          }
+        }
+      }
+    </script>
+    <!--css-->
+    <style>
+      body {
+        background-image: url("/wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-family: lato;
+      }
+      .center {
+        align-items: center;
+        text-align: center;
+      }
+      .searchbutton:hover {
+        color: blue;
+      }
+      .bottomleft {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+      }
+      #query {
+        width: 30%;
+        height: 2em;
+        border-radius: 1em;
+        border: rgb(160, 158, 158) solid 2px;
+        margin: .5em;
+      }
+      button {
+        border-radius: .5em;
+        border: none;
+      }
+      #go {
+        height: 2em;
+        padding:  0px .5em;
+        border-radius: 2em;
+      }
+    </style>
+  </body>
+</html>
