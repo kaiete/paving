@@ -51,7 +51,7 @@
           location.href = search
         } else {
           var encodedsearch = encodeURIComponent(search)
-          if !(localStorage.getItem("ocean") == "true") {
+          if (localStorage.getItem("ocean") == "false") {
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
           } else {
             window.location.href = "https://oceanhero.today/web?q=" = encodedsearch
