@@ -19,7 +19,7 @@
       function search() {
         document.getElementById("querybox").hidden = false
         document.getElementById("query").focus()
-        document.getElementById("query").onkeypress = function(e) {
+        document.onkeypress = function(e) {
           if (e.keyCode == 13) {
             pavetheway()
           }
