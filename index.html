@@ -11,6 +11,11 @@
       if (localStorage.getItem("ocean") == "true") {
         location.href = "https://kaiete.uk/paving/ocean/"
       }
+      document.getElementById("query").onkeypress = function(e) {
+          if (e.keyCode == 13) {
+            search()
+          }
+      }
       function search() {
         document.getElementById("querybox").hidden = false
         document.getElementById("query").focus()
@@ -54,7 +59,7 @@
           location.href = search
         } else {
           var encodedsearch = encodeURIComponent(search)
-          if !(localStorage.getItem("ocean") == "true") {
+          if (localStorage.getItem("ocean") == "false") {
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
           } else {
             window.location.href = "https://oceanhero.today/web?q=" = encodedsearch
