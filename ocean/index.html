@@ -8,7 +8,7 @@
       if (localStorage.getItem("ocean") == "false") {
         location.href = "https://kaiete.uk/paving/"
       }
-            document.getElementById("query").onkeypress = function(e) {
+            document.onkeypress = function(e) {
           if (e.keyCode == 13) {
             search()
           }
