@@ -15,7 +15,7 @@
       var pageurl = new URL(location.href);
       pageurl = pageurl.searchParams;
       alert(pageurl)
-      location.href = "https://duckduckgo.com/?s=" + encodeURIComponent(pageurl["s"])
+      location.href = "https://duckduckgo.com/?s=" + encodeURIComponent(pageurl.substring(2))
     </script>
   </body>
 </html>
