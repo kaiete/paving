@@ -14,8 +14,7 @@
     <script>
       var pageurl = new URL(location.href);
       pageurl = pageurl.searchParams;
-      sessionStorage.setItem("redirquery",pageurl["s"]);
-      location.href = "https://duckduckgo.com/?s=" + encodeURIComponent(sessionStorage.getItem("redirquery"))
+      location.href = "https://duckduckgo.com/?s=" + encodeURIComponent(pageurl["s"])
     </script>
   </body>
 </html>
