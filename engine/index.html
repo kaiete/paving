@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting you...</title>
+  </head>
+  <body>
+    <h1>Please wait...</h1>
+    <p><i>If you don't get redirected, please <a href="javascript:location.reload()">reload the page</a> or <a href"mailto:kaiete@aragon-press.com">contact me</a></i></p>
+    <style>
+      html {
+        font-family: roboto, ubuntu, sans-serif;
+      }
+    </style>
+    <script>
+      var pageurl = new URL(location.href);
+      pageurl = pageurl.searchParams;
+      sessionStorage.setItem("redirquery",pageurl["s"]);
+      location.href = "https://duckduckgo.com/?s=" + encodeURIComponent(sessionStorage.getItem("redirquery"))
+    </script>
+  </body>
+</html>
