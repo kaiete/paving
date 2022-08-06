@@ -19,6 +19,9 @@
         if (search.toLowerCase() == "project storytime") {
           window.location.href = "http://storytime.k.vu"
         } else if (search.search("http://") != -1 || search.search("https://") != -1 || search.search("www.") != -1) {
+          if (search.search("http://") == -1 && search.search("https://") == -1) {
+            search = "http://" + search
+          }
           location.href = search
         } else {
           var encodedsearch = encodeURIComponent(search)
