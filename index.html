@@ -44,6 +44,22 @@
         localStorage.setItem("ocean","true")
         location.reload()
       }
+      switch (screen.orientation) {
+        case "portrait-primary":
+        case "portrait-secondary":
+          if (localStorage.getItem('prompt') == 'false') {
+            break
+          }
+          let redir_yn = prompt("Switch to mobile version?")
+          if (redir_yn) {
+            localStorage.setItem('lite','true')
+            location.href = "https://kaiete.uk/paving/lite
+          } else {
+            alert("OK, prompt disabled for this device")
+            localStorage.setItem('prompt','false')
+          }
+          break
+      }
     </script>
   </head>
   <body id="body">
