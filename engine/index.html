@@ -12,6 +12,7 @@
       }
     </style>
     <script>
+      localStorage.setItem('count',localStorage.getItem('count') + 1)
       var pageurl = new URL(location.href);
       pageurl = pageurl.searchParams;
       location.href = "https://duckduckgo.com/?q=" + pageurl.toString().substring(2)
