@@ -49,12 +49,9 @@
   <body id="body">
     <a href="lite/" onclick="localStorage.setItem('lite','true')" style="position: absolute; bottom: 5px; right: 5px; text-align: right; background: white; border-radius: .5em; padding: 0px 3px;">Slow internet?</a>
     <!--html-->
+    <h1 style="color: black;">paving</h1>
     <div class="center">
-      <h1 class="center" style="color: black;">paving</h1>
-      <button class="searchbutton" id="searchbutton" onclick="search()">
-        Search...
-      </button>
-      <div id="querybox" hidden>
+      <div id="querybox">
         <input type="text" id="query" value="" placeholder="Search for anything..." style="display: inline;">
         <button onclick="pavetheway()" id="go">Go!</button>
       </div>
@@ -74,7 +71,7 @@
       .center {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 35%;
         transform: translate(-50%, -50%);
       }
       .center {
