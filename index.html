@@ -87,20 +87,22 @@
         top: 35%;
         transform: translate(-50%, -50%);
       }
-      .searchbutton:hover {
-        color: blue;
-      }
       .bottomleft {
         position: absolute;
         bottom: 5px;
         left: 5px;
       }
       #query {
-        width: 30%;
+        width: 25%;
         height: 2em;
         border-radius: 1em;
-        border: rgb(160, 158, 158) solid 2px;
+        border: none;
+        outline: none;
         margin: .5em;
+        transition: all .40s ease-in-out;
+      }
+      #query:hover {
+        width: 35%;
       }
       button {
         border-radius: .5em;
