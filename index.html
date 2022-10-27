@@ -4,6 +4,7 @@
     <title>paving</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
+	<link rel="icon" type="image/x-icon" href="https://kaiete.uk/kaiete-icon-only.ico">
     <script>
       function search() {
         document.getElementById("querybox").hidden = false
@@ -18,7 +19,7 @@
         var search = document.getElementById("query").value
         if (search.toLowerCase() == "project storytime") {
           window.location.href = "http://storytime.k.vu"
-        } else if (search.search("http://") != -1 || search.search("https://") != -1 || search.search("www.") != -1) {
+        } else if (search.search("http://") != -1 || search.search("https://") != -1 || search.search("www.") != -1 || search.search(".com") != -1) {
           if (search.search("http://") == -1 && search.search("https://") == -1) {
             search = "http://" + search
           }
