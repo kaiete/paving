@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Paving</title>
+  </head>
+  <body>
+    <h1>My Paving</h1>
+    <h3>Customise Paving to your likings.</h3>
+    <input type="checkbox" id="url-redirect" name="url-redirect">
+    <label for="url-redirect">Don't send me to urls I type in, search for everything I type.</label>
+    <br>
+    <button onclick="savechoices()">Confirm my choices.</button>
+  </body>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function savechoices() {
+      if (document.getElementById("url-redirect").checked) {
+        localStorage.setItem("redirect-off","true")
+      }
+    }
+  </script>
+</html>
