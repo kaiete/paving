@@ -23,7 +23,9 @@
           if (search.search("http://") == -1 && search.search("https://") == -1) {
             search = "http://" + search
           }
+		  if (localStorage.getItem("redirect-off") != "true") {
           location.href = search
+          }
         } else {
           var encodedsearch = encodeURIComponent(search)
           window.location.href = "https://duckduckgo.com/?q=" + encodedsearch
