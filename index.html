@@ -6,15 +6,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
 	<link rel="icon" type="image/x-icon" href="https://kaiete.uk/paving/paving.ico">
     <script>
-      function search() {
-        document.getElementById("querybox").hidden = false
-        document.getElementById("query").focus()
-        document.onkeypress = function(e) {
-          if (e.keyCode == 13) {
-            pavetheway()
-          }
-        }
-      }
       function pavetheway() {
         var search = document.getElementById("query").value
         if (search.toLowerCase() == "project storytime") {
@@ -39,7 +30,7 @@
       }
       document.onkeypress = function(e) {
           if (e.keyCode == 13) {
-            search()
+            pavetheway()
           }
       }
 
